@@ -1,0 +1,10 @@
+{
+  "files": [
+    "shape.py",
+    "rectangle.py",
+    "square.py",
+    "circle.py"
+  ],
+  "ignore": [],
+  "max": 4
+}
