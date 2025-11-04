@@ -10,6 +10,12 @@ permissions:
 
 jobs:
 
+  copyfiles:
+      permissions: write-all
+      if: ${{ (!contains(github.actor, 'classroom')) && (!contains(github.repository_owner, 'python')) }}
+      uses: BZZ-Commons/set-testdata/.github/workflows/copyfiles.yml@master
+      secrets: inherit
+      
   grading:
     if: ${{ !contains(github.actor, 'classroom') }}
     uses: BZZ-Commons/pygrader/.github/workflows/py_autograding.yml@main
